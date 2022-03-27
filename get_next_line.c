@@ -6,7 +6,7 @@
 /*   By: jboumal <jboumal@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:16:50 by jboumal           #+#    #+#             */
-/*   Updated: 2022/01/16 16:16:53 by jboumal          ###   ########.fr       */
+/*   Updated: 2022/03/27 12:24:02 by jboumal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -73,7 +73,7 @@ static int	read_next_line(int fd, char *buffer, char *stc_line, char **line)
 
 char	*get_next_line(int fd)
 {
-	char		buffer[BUFFER_SIZE];
+	char		buffer[BUFFER_SIZE + 1];
 	char		*line;
 	static char	stc_line[BUFFER_SIZE] = "";
 	int			n;
